@@ -4,27 +4,33 @@
 
 ホームディレクトリの直下に、README.md という名前の空ファイルを作成してください。
 
+```shell
 touch README.md
+```
 
 その上で、README.md ファイルのオーナーとグループを確認してください。
 
+```shell
 ls -l README.md
-
+```
 ## 2. ファイルのパーミッション
 
 README.md ファイルのパーミッションを確認し、誰に何の権限が付与されているかを説明してください。
 
+```
 -rw-r--r--
 - ファイル種別が「ファイル」（d:ディレクトリ,|:シンボリックリンク）
 rw- 所有者に読み取り、書き取りの権限あり（x:実行権限）
 r-- 所有グループに読み取りの権限
 r-- その他に読み取りの権限
+```
 
 ## 3. ファイルのパーミッションの設定
 
 README.md ファイルのオーナーに対して、読み取り、書き込み、実行の全ての権限を付与してください。
-
+```shell
 chmod u+rwx README.md
+```
 
 ## 4. ディレクトリのパーミッションの設定
 
@@ -32,11 +38,27 @@ chmod u+rwx README.md
 
 permission ディレクトリのグループに対して、書き込み権限を付与してください。
 
-mkdir permission
-chmod g+w permission
+``` shell
+$ mkdir permission
+$ chmod g+w permission
+```
 
 ## 5. スーパーユーザー
 
 スーパーユーザーとして、ホームディレクトリの直下に superuser という名前の空ディレクトリを作成してください。
 
 作成後、superuser ディレクトリのオーナーが誰かを確認してください。
+```shell
+$ mkdir superuser
+
+$ ls -l
+
+-> drwxr-xr-x 2 root root 4096  9月 30 04:27 superuser
+
+d ファイル種別：ディレクトリ
+rwx 所有者：読み取り、書き取り、実行
+r-x 所有グループ：読み取り、実行
+r-x その他：読み取り、実行
+root 所有者
+root 所有グループ
+```

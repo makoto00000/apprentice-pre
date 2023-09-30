@@ -13,3 +13,20 @@ Linux を動作させる環境を用意しましょう。ご自身の好きな�
 Linux の OS は何でも大丈夫ですが、Ubuntu が使いやすいのでオススメです。
 
 Linux の QUEST は基本的にここで構築した環境上で行ってください。
+
+## → Dockerを使ったubuntu環境構築
+
+### dockerfile, docker-compose.ymlのあるディレクトリで以下の実行
+```shell
+$ docker compose up -d
+
+$ docker compose exec app bash
+```
+
+### コンテナの停止、削除、破棄
+
+```shell
+$ exit
+
+$ docker compose down
+```
